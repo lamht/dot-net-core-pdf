@@ -1,7 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /app
-COPY . ./
+COPY *.csproj ./
 RUN dotnet restore
+COPY . ./
 RUN dotnet publish -c Release -o publish
 
 FROM mcr.microsoft.com/dotnet/runtime:3.1 AS base

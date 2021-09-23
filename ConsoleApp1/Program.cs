@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
+using System.Threading;
 
 namespace ConsoleApp
 {
@@ -36,6 +37,7 @@ namespace ConsoleApp
             }
             File.WriteAllBytes(path, result);
             Console.WriteLine(path);
+            //Thread.Sleep(600000);
         }
         
     }
