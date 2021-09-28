@@ -27,7 +27,7 @@ namespace ConsoleApp
 
             Console.WriteLine("Hello, World!");
             var pdf = serviceProvider.GetService<Pdf>(); ;
-            string html = File.ReadAllText("invoice.html");
+            string html = File.ReadAllText("test.html");
             var result = pdf.ConvertPdf(html);
             string pathDir = Path.Combine(Directory.GetCurrentDirectory(),"pdf");
             string path = Path.Combine(pathDir, $"invoice_{DateTime.UtcNow:yyyyMMddHHmmss}.pdf");

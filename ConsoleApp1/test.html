@@ -11,6 +11,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<style>
+    .row {
+        display: -webkit-box;
+        /* wkhtmltopdf uses this one */
+        display: flex;
+        -webkit-box-pack: center;
+        /* wkhtmltopdf uses this one */
+        justify-content: center;
+    }
+
+    .row>div {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+
+    .row>div:last-child {
+        margin-right: 0;
+    }
+</style>
 <div class="container mt-3">
     <div class="row mt-2 mb-2">
         <div class="col-6">
@@ -40,28 +60,31 @@
             </div>
         </div>
     </div>
-    <table class="table table-dark table-striped">
-        <thead>
-            <tr>
-                <th>Col1</th>
-                <th>Col2</th>
-                <th>Col3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">data 1</td>
-                <td>data 2</td>
-                <td>data 3</td>
-            </tr>
-            <tr>
-                <td scope="row">data 4</td>
-                <td>data 5</td>
-                <td>data 6</td>
-            </tr>
-        </tbody>
-    </table>
-    <img src="https://media.istockphoto.com/photos/lens-flare-picture-id950348874?b=1&k=6&m=950348874&s=170667a&w=0&h=t60wn5_HU6wMFcAO_E2CvyNvZebUuHIKiUVpCl1ZKj0=" class="img-fluid" alt="">
+    <div style="page-break-before:always;">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Col1</th>
+                    <th>Col2</th>
+                    <th>Col3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                </tr>
+                <tr>
+                    <td scope="row">data 4</td>
+                    <td>data 5</td>
+                    <td>data 6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <img src="https://media.istockphoto.com/photos/lens-flare-picture-id950348874?b=1&k=6&m=950348874&s=170667a&w=0&h=t60wn5_HU6wMFcAO_E2CvyNvZebUuHIKiUVpCl1ZKj0="
+        class="img-fluid" alt="">
     <div style="float: none;">
         <div>Foo (supposed to appear on first page).</div>
         <div style="page-break-before:always;">Bar (supposed to appear on the second page).</div>
