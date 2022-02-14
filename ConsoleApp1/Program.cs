@@ -36,6 +36,8 @@ namespace ConsoleApp
                 Directory.CreateDirectory(pathDir);
             }
             File.WriteAllBytes(path, result);
+            Console.WriteLine("Add background");
+            new BackgroundPdf().AddBackground1(path);
             Console.WriteLine(path);
             //Thread.Sleep(600000);
         }
