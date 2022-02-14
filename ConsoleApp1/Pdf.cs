@@ -35,7 +35,7 @@ namespace ConsoleApp1
                 PagesCount = true,
                 WebSettings = { DefaultEncoding = "utf-8" },
                 HtmlContent = htmlContent,
-                HeaderSettings = { HtmUrl = headerPath },
+                //HeaderSettings = { HtmUrl = headerPath },
                 FooterSettings = { HtmUrl = footerPath }
             };
             pdf.Objects.Add(page);

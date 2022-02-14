@@ -58,7 +58,7 @@ namespace ConsoleApp
             for (int page = 1; page <= pdfReader.NumberOfPages; page++)
             {
                 Console.WriteLine("Set bg page " + page);
-                waterMark = stamp.GetOverContent(page);
+                waterMark = stamp.GetUnderContent(page);
                 waterMark.AddImage(img);
             }
             stamp.FormFlattening = true;
